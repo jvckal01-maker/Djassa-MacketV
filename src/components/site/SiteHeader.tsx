@@ -14,15 +14,21 @@ export function SiteHeader() {
           <span className="text-lg">{brand.name}</span>
         </Link>
 
-        <div className="hidden flex-1 items-center justify-center md:flex">
-          <Link
-            href="/recherche"
-            className="flex w-full max-w-xl items-center gap-2 rounded-full border px-4 py-2 text-sm text-gray-600"
-          >
+        <form
+          action="/recherche"
+          method="GET"
+          className="hidden flex-1 items-center justify-center md:flex"
+        >
+          <div className="flex w-full max-w-xl items-center gap-2 rounded-full border px-4 py-2 text-sm text-gray-600">
             <Search size={16} />
-            <span>Cherche ton truc ici...</span>
-          </Link>
-        </div>
+            <input
+              type="text"
+              name="q"
+              placeholder="Cherche ton truc ici..."
+              className="w-full bg-transparent outline-none"
+            />
+          </div>
+        </form>
 
         <div className="flex items-center gap-3">
           <Link href="/boutique" className="text-sm text-gray-700 hover:text-brand-600">
