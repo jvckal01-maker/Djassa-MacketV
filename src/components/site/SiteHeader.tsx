@@ -28,6 +28,9 @@ export function SiteHeader() {
           <Link href="/boutique" className="text-sm text-gray-700 hover:text-brand-600">
             Boutiques
           </Link>
+          <Link href="/vendeur" className="text-sm text-gray-700 hover:text-brand-600">
+            Vendre
+          </Link>
           <Link href="/login" className="rounded-full bg-gray-900 px-4 py-2 text-sm text-white">
             Connexion
           </Link>

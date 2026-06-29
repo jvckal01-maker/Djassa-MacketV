@@ -21,7 +21,7 @@ model User {
   role         Role     @default(BUYER)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
-  shops        Shop[]
+  shop         Shop?
 }
 
 model Shop {
@@ -30,7 +30,7 @@ model Shop {
   name        String
   description String?
   owner       User      @relation(fields: [ownerId], references: [id])
-  ownerId     String
+  ownerId     String    @unique
   products    Product[]
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
